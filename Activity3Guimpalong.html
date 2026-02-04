@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 30px;
+            animation: bg 10s infinite alternate;
+        }
+
+        @keyframes bg {
+            0% { background-color: #ffd6cc; }
+            50% { background-color: #cce7ff; }
+            100% { background-color: #d4ffd4; }
+        }
+
+        img {
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .name {
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .description {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .description p {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="picture.jpg">
+
+    <div class="name" onclick="showDescription()">GUIMPALONG JOHNPAUL</div>
+
+    <div class="description" id="description" style="display: none;" onclick="showName()">
+        <p>Hi! I'm Johnpaul Guimpalong, a passionate student currently studying Information Technology (IT). My journey into the world of IT began at a young age, as I’ve always been fascinated by computers and how technology works. I love solving problems and enjoy the challenge that comes with programming and working on various tech projects.</p>
+
+        <p>As an IT student, I'm learning not only about software and hardware but also how technology impacts every aspect of our lives. From developing software applications to understanding complex algorithms, I am constantly discovering new things that expand my knowledge. This field excites me because it’s ever-evolving, and there are always new opportunities to explore and grow.</p>
+
+        <p>Outside of my studies, I have a deep passion for music, particularly playing the guitar. Music has always been a way for me to unwind and express myself creatively. Playing the guitar helps me relax after a long day of coding and study, and it's a hobby that brings me joy and balance. Whether it’s strumming my favorite songs or learning new chords, playing the guitar is my personal escape.</p>
+    </div>
+
+    <script>
+        function showDescription() {
+            document.querySelector('.name').style.display = 'none';
+            document.querySelector('.description').style.display = 'block';
+        }
+
+        function showName() {
+            document.querySelector('.description').style.display = 'none';
+            document.querySelector('.name').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
